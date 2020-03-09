@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+// import {StyledButton} from 'styled-components.jsx';
+
+import SWCharCards from "./components/SWCharCards";
 
 import './App.css';
 
@@ -24,9 +27,16 @@ const App = () => {
   
   return (
     <div className="App">
-      {/* <h1 className="Header">React Wars</h1> */}
+      <h1 className="Header">React Wars</h1>
       {character.map(swCharacter => (
-        console.log('SWCHAR: ', {swCharacter})
+        <>
+        <SWCharCards 
+        name={swCharacter.name}
+        height={swCharacter.height}
+        mass={swCharacter.mass}
+        />
+        {/* <StyledButton>Styled component button</StyledButton> */}
+        </>
       ))}
     </div>
   );
