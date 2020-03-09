@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-// import {StyledButton} from 'styled-components.jsx';
 
 import SWCharCards from "./components/SWCharCards";
 
@@ -34,8 +33,8 @@ const App = () => {
         name={swCharacter.name}
         height={swCharacter.height}
         mass={swCharacter.mass}
+        key={Math.random()}
         />
-        {/* <StyledButton>Styled component button</StyledButton> */}
         </>
       ))}
     </div>
