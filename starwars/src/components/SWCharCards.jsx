@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components'
 
-const Button = styled.button`
+const Div = styled.div`
   background: transparent;
   border-radius: 3px;
   border: 2px solid palevioletred;
@@ -19,13 +19,11 @@ const Button = styled.button`
 
 const SWCharCards = (props) => {
     return(
-        <div>
-        {/* propsToButton={props} */}
-            <p>Name: {props.propsToButton.name}</p>
-            <p>Height: {props.propsToButton.height}</p>
-            <p>Mass: {props.propsToButton.mass}</p>
-            <Button />
-        </div>
+            <Div> 
+            <p>Name: {props.name}</p>
+            <p>Height: {props.height}</p>
+            <p>Mass: {props.mass}</p>
+            </Div>
     )
 }
 
